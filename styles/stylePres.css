@@ -1,0 +1,100 @@
+:root{
+    --background-light: rgba(61, 107, 106, 0.3);
+    --background-not-light: rgba(70, 100, 100, 0.8);
+}
+.bodyStyle{
+    background-color: black;
+    color: antiquewhite;
+}
+.header{
+    background-image: linear-gradient(to bottom, var(--background-light), var(--background-not-light));
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--background-light);
+    border-radius: 2%;
+    align-items: center;
+    height: 20%;
+    width: 99%;
+   }
+
+.identify {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.subItems, .adress, .objective{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-1, .item-2, .item-3, .adress, .objective, .mainContent{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1em 1em 0em 1em;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 0;
+    align-items: center;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    width: 30%;
+    border-right: 3px solid;
+}
+
+.professionalExp{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+}
+
+.professionalExp h2, .about h2{
+    align-self: center;
+}
+
+.mainContent .title, .subItems .title, .adress .title, .objective .title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.obs {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    font-size: 18px; 
+}
+
+.btn {
+    border: 1px solid ;
+    border-radius: 10%;
+    align-self: flex-end;
+    width: 9%;
+    height: 20%;
+    transition: transform 0.5s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn:hover{
+    transform: rotate(5deg);
+}
