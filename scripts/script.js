@@ -1,14 +1,14 @@
-function alternarEstilo() {
-    var titulo = document.getElementById("body");
+function switchStyle() {
+    var body = document.getElementById("body");
     var btn = document.getElementById("btn");
 
-    if (titulo.classList.contains("bodyStyle")){
-        titulo.classList.remove("bodyStyle");
-        btn.classList.remove("bodyStyle");
-        btn.textContent = "ATIVAR MODO DARK";    
+    if (body.classList.contains("darkBackgroundStyle")){
+        body.classList.remove("darkBackgroundStyle");
+        btn.classList.remove("darkBackgroundStyle");
+        btn.textContent = "DARK MODE";    
     } else {
-        titulo.classList.add("bodyStyle");
-        btn.classList.add("bodyStyle");
-        btn.textContent = "ATIVAR MODO LIGHT";
+        body.classList.add("darkBackgroundStyle");
+        btn.classList.add("darkBackgroundStyle");
+        btn.textContent = "LIGHT MODE";
     }
   }
