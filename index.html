@@ -4,47 +4,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Curriculum Vitae</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="scripts/script.js"></script>
   <link rel="stylesheet" href="styles/stylePres.css" />
 </head>
 
-<body id="body container-fluid">
+<body class="body container-fluid" id="body">
   <nav class="header">
-    
-    <div class="row justify-content-center mb-2">
-      <h1 class="title col-10">Curriculum vitae</h1>
-      <button class="btn col-10" id="btn" onclick="switchStyle()">DARK MODE</button>
+    <div class="row justify-content-center text-center mb-2">
+      <h1 class="title col-10 col-md-10 col-lg-10">Curriculum vitae</h1>
+      <button class="btn col-6 col-md-4 col-lg-3" id="btn" onclick="switchStyle()">DARK MODE</button>
     </div>
 
     <div class="row justify-content-center text-center mb-2">
-      <div class="img col-10">
+      <div title="foto de perfil" alt="foto de perfil" class="img col-10">
         <img src="assets/foto.jpeg" />
       </div>
     </div>
 
     <div class="subItems row justify-content-center">
       
-      <div class="item-1 col-10">
+      <div class="item-1 col-10 col-md-4 col-lg-2">
         <p class="title">Nome</p>
         <p>Daniel Krieger Schifelbain</p>
       </div>
 
-      <div class="item-2 col-10">
+      <div class="item-2 col-10 col-md-4 col-lg-2">
         <p class="title">Telefone/Whatsapp</p>
         <p>(55) 99719-9028</p>
       </div>
 
-      <div class="item-3 col-10">
+      <div class="item-3 col-10 col-md-4 col-lg-2">
         <p class="title">E-mail</p>
         <p>danielschifelbain@gmail.com</p>
       </div>
-
-      <div class="adress col-6">
+      <div class="row justify-content-center">
+      <div class="adress col-6 col-md-4 col-lg-2">
         <p class="title">Endereço</p>
         <p>Santa Maria, RS - Brasil</p>
       </div>
 
-      <div class="objective col-6">
+      <div class="objective col-6 col-md-4 col-lg-2">
         <p class="title">Objetivo:</p>
         <p>Setor Operacional;</p>
         <p>Setor Administrativo;</p>
@@ -53,8 +51,9 @@
 
     </div>
   </nav>
-  <nav class="mainContent">
-    <div class="about">
+  <nav class="mainContent container-fluid ">
+    <div class="row justify-content-center mb-2">
+    <div class="about col-12 col-md-5 col-lg-4">
       <h2>Sobre</h2>
       <div class="items">
         <ul>
@@ -89,7 +88,8 @@
         </ul>
       </div>
     </div>
-    <div class="professionalExp">
+    
+    <div class="professionalExp col-12 col-md-7 col-lg-8">
       <h2>Experiência profissional</h2>
       <div class="items">
         <ul>
@@ -131,6 +131,7 @@
         </ul>
       </div>
     </div>
+    </div>
   </nav>
 
   <div class="obs">
@@ -147,4 +148,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
 </body>

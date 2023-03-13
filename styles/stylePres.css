@@ -13,12 +13,9 @@
     var(--background-light),
     var(--background-dark)
   );
-  /* display: flex; */
-  /* flex-direction: column; */
   padding: 0.5em;
   border: 1px solid var(--background-light);
   border-radius: 10px;
-  /* max-width: 100%; */
 }
 
 .btn {
@@ -31,7 +28,6 @@
 .btn:hover {
   transform: rotate(5deg);
 }
-
 
 .title {
   font-size: 30px;
@@ -55,14 +51,17 @@
 
 .about {
   padding: 0 1em;
-  width: 30%;
   border-right: 3px solid;
+}
+@media (max-width: 576px) {
+  .about {
+    border-right: none;
+  }
 }
 
 .professionalExp {
   display: flex;
   flex-direction: column;
-  width: 70%;
 }
 
 .professionalExp h2,
