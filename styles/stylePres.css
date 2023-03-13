@@ -13,23 +13,17 @@
     var(--background-light),
     var(--background-dark)
   );
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   padding: 0.5em;
   border: 1px solid var(--background-light);
   border-radius: 10px;
-  max-width: 100%;
-}
-
-.row{
-  align-self: center;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .btn {
   border: 1px solid var(--background-dark);
   border-radius: 10%;
-  max-width: 20%;
   transition: transform 0.5s ease;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
@@ -42,7 +36,6 @@
 .title {
   font-size: 30px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  max-width: 100%;
 }
 
 .item-1,
@@ -52,20 +45,15 @@
 .objective {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 0.5em 0.5em 0em 0.5em;
-  max-width: 100%;
 }
 
 .mainContent {
-  display: flex;
-  flex-direction: row;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   padding: 2em 0;
   align-items: center;
 }
 
 .about {
-  display: flex;
-  flex-direction: column;
   padding: 0 1em;
   width: 30%;
   border-right: 3px solid;
