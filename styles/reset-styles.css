@@ -1,0 +1,78 @@
+    body {
+        background-color: black;
+    }
+
+    section {
+        color: white;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+/* Estilos para dispositivos desktop (largura mínima de 768px, você pode ajustar esse valor) */
+@media (min-width: 768px) {
+    #experienceLabel {
+        margin-top: 20em;
+    }
+    .sectionLabel {
+        display: none; /* Exibe as seções em dispositivos desktop */
+    }
+    #mainNav {
+        display: block; /* Exibe o menu em dispositivos desktop */
+    }
+    #mainNav ul {
+        list-style-type: none;
+        margin: 2em 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #mainNav li {
+      margin: 0;
+    }
+
+    #mainNav a {
+        text-decoration: none;
+        color: white;
+        padding: .5rem;
+        background-color: var(--sec-bg-color);
+        font-size: 18px;   
+    }
+
+    #mainNav  a:hover{
+        background-color: var(--hover-color);
+    }
+    
+    .aboutItem {
+        float:left;
+    }
+}
+
+/* Estilos para dispositivos desktop (largura mínima de 768px) */
+@media (max-width: 768px) {
+        
+    .sectionSeparator {
+        margin: 5em 0 2em 0; /* Adiciona espaço entre as seções */
+    }
+
+    
+    .sectionLabel {
+        display: block; /* Exibe as seções em dispositivos desktop */
+        background-color: var(--main-bg-color);
+    }
+
+    #mainNav {
+        display: none; /* Exibe o menu em dispositivos desktop */
+    }
+
+}
+
+
+
