@@ -72,4 +72,68 @@ document.addEventListener("DOMContentLoaded", function () {
             section.style.display = 'none';
         }
     }
+
+    // PARTE DA LUMINOSIDADE DA PÁGINA
+
+    // Indexando elementos chave para mudança de luminosidade
+    const brightnessSlider = document.getElementById("brightness-slider");
+    const body = document.body;
+    const labels = document.querySelectorAll(".sectionLabel");
+    const header = document.querySelector("#header");
+    
+    // Função que adequa a luminosidade de acordo com o controle
+    brightnessSlider.addEventListener("input", function () {
+    // Adequações de valores para utilização
+    let brightnessValueBg = this.value / 100; 
+    let brightnessValueTxt = this.value / 100;
+
+    brightnessValueBg = Math.min(1, Math.max(0, brightnessValueBg));
+    brightnessValueTxt = Math.min(1, Math.max(0, brightnessValueTxt));
+    
+    // Criação das cores de base para mudança, aqui pode alterar as cores base
+    const darkColor = "#000000";
+    const lightColor = "#ffffff";
+
+    // Chamando a função que faz o controle da cor que será adicionada aos elementos
+    const interpolatedColorBg = interpolateColors(darkColor, lightColor, brightnessValueBg);
+    const interpolatedColorTxt = interpolateColors(lightColor, darkColor, brightnessValueTxt);
+    // Obs: para obter o efeito da mudança do texto (ou seja, o inverso da cor escura), usei a mesma função
+    // porém mudei a ordem das cores base
+
+
+    // Atualizando as cores
+    body.style.backgroundColor = interpolatedColorBg;
+    body.style.color = interpolatedColorTxt;
+    sections.forEach((section) => {
+        section.style.color = interpolatedColorTxt;
+    });
+    labels.forEach((label) => {
+        label.style.color = interpolatedColorTxt;
+    });
+    header.style.color = interpolatedColorTxt;
+
+});
+
+// Função para interpolar entre duas cores
+function interpolateColors(color1, color2, ratio) {
+    const hex = (x) => {
+        const integer = Math.round(x);
+        const str = integer.toString(16);
+        return str.length === 1 ? "0" + str : str;
+    };
+
+    const r1 = parseInt(color1.slice(1, 3), 16);
+    const g1 = parseInt(color1.slice(3, 5), 16);
+    const b1 = parseInt(color1.slice(5, 7), 16);
+
+    const r2 = parseInt(color2.slice(1, 3), 16);
+    const g2 = parseInt(color2.slice(3, 5), 16);
+    const b2 = parseInt(color2.slice(5, 7), 16);
+
+    const r = Math.floor(r1 + (r2 - r1) * ratio);
+    const g = Math.floor(g1 + (g2 - g1) * ratio);
+    const b = Math.floor(b1 + (b2 - b1) * ratio);
+
+    return `#${hex(r)}${hex(g)}${hex(b)}`;
+    }
 });

@@ -18,6 +18,8 @@ body {
     color: white;
     padding: 1em;
     border-radius: 50px;
+    background-color: var(--main-bg-color);
+ 
 }
 
 .itemLabel {
@@ -83,7 +85,6 @@ body {
     
     .sectionLabel {
         display: block; 
-        background-color: var(--main-bg-color);
     }
 
     #mainNav {
