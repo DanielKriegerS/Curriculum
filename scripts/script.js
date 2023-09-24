@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll('#mainNav a');
     const sections = document.querySelectorAll('section');
-
+    const footer = document.querySelector("#footer");
+    // Funções que mostram as seções pelo click nos links (display desktop)
     navLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
             event.preventDefault();
@@ -13,13 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.style.display = 'none';
             });
 
+
             // Abre a seção de destino
             targetSection.style.display = 'block';
-
+            
+            // Efetua a rolagem da tela para a seção destino
             window.scrollTo({
                 top: targetSection.offsetTop,
                 behavior: 'smooth' 
             });
+
+            footerPosition();
+            
         });
     });
 
@@ -34,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.style.display = 'none';
             }
         });
+        footerPosition();
     }
 
     const aboutLabel = document.querySelector('#aboutLabel');
@@ -71,6 +78,18 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             section.style.display = 'none';
         }
+
+        footerPosition();
+    }
+
+    // Função para manter o rodapé na posição correta
+    function footerPosition() {
+        sections.forEach((section) => {
+            if (section.style.display === 'block') {
+            // "Manda" o footer para o rodapé da tela alterando a posição
+            footer.style.position = 'relative';
+            }
+        })
     }
 
     // PARTE DA LUMINOSIDADE DA PÁGINA
@@ -80,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
     const labels = document.querySelectorAll(".sectionLabel");
     const header = document.querySelector("#header");
+    const footerIcons = document.querySelectorAll(".footerIcon");
     
     // Função que adequa a luminosidade de acordo com o controle
     brightnessSlider.addEventListener("input", function () {
@@ -111,7 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
         label.style.color = interpolatedColorTxt;
     });
     header.style.color = interpolatedColorTxt;
-
+    footer.style.color = interpolatedColorTxt;
+    footerIcons.forEach((footerLink) => {
+        footerLink.style.color = interpolatedColorTxt;
+    })
 });
 
 // Função para interpolar entre duas cores
