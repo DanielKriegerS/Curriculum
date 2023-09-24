@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 top: targetSection.offsetTop,
                 behavior: 'smooth' 
             });
-
-            footerPosition();
             
         });
     });
@@ -40,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.style.display = 'none';
             }
         });
-        footerPosition();
     }
 
     const aboutLabel = document.querySelector('#aboutLabel');
@@ -78,18 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             section.style.display = 'none';
         }
-
-        footerPosition();
-    }
-
-    // Função para manter o rodapé na posição correta
-    function footerPosition() {
-        sections.forEach((section) => {
-            if (section.style.display === 'block') {
-            // "Manda" o footer para o rodapé da tela alterando a posição
-            footer.style.position = 'relative';
-            }
-        })
     }
 
     // PARTE DA LUMINOSIDADE DA PÁGINA
